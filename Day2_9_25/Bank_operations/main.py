@@ -1,6 +1,57 @@
-
 # importing bank class for operation/functions
 import BankClass as Bank
+print("")
+print("==============================================================")
+print("============== Welcome to Olasquare Bank =====================")
+print("==============================================================")
+print()
+print("Let first create account for you.....")
+# creatin account
+name=input("Enter account fullname: ")
+account_type=input("Which Account type you want to open (Savings/Current)?: ")
+intial_deposit=input("Enter initial deposit: ")
 # Creating account
-msg,Account1= Bank.BankAccount.create_account("Saheed Olayemi","Savings",10000)
+msg,Account1= Bank.BankAccount.create_account(name,account_type,10000)
+print("")
 print(msg)
+
+# Loop for repeating operations
+while True:
+    print("")
+    print("==============================================================")
+    print("Select operation to Perform")
+    # print("1. Create Account")
+    print("1. Deposit ")
+    print("2. Withdraw")
+    print("3. Check balance")
+    print("4. Exit")
+    print("--------------------------------------")
+    print("")
+    choice= input("Enter your choice of operation: ")
+    
+   # checking choice
+    # if choice=="1":
+    #     name=input("Enter account fullname: ")
+    #     account_type=input("Which Account type you want to open (Savings/Current)?: ")
+    #     intial_deposit=input("Enter initial deposit: ")
+    #     # Creating account
+    #     msg,Account1= Bank.BankAccount.create_account(name,account_type,10000)
+    #     print(msg)
+    if choice=='1':
+        amount=input("Enter amount to deposit: ")
+        print(Account1.deposit(amount))
+    elif choice=='2':
+        amount=input("Enter amount to deposit: ")
+        print(Account1.withdraw(amount))
+    elif choice=='3':
+        print(Account1.check_balance())
+    elif choice=='4':
+        break
+    else:
+        print("Invalid choice selected")
+print("")
+print("==============================================================")
+print("============== Welcome to Olasquare Bank =====================")
+print("==============================================================")
+print()
+
