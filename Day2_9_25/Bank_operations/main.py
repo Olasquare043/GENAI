@@ -9,9 +9,15 @@ print("Let first create account for you.....")
 # creatin account
 name=input("Enter account fullname: ")
 account_type=input("Which Account type you want to open (Savings/Current)?: ")
-intial_deposit=input("Enter initial deposit: ")
+initial_deposit=input("Enter initial deposit: ")
+try:
+    initial_deposit=float(initial_deposit)    
+except ValueError:
+    print("Invalid intial deposit.. Setting to 0")
+    initial_deposit=0.0
+
 # Creating account
-msg,Account1= Bank.BankAccount.create_account(name,account_type,10000)
+msg,Account1= Bank.BankAccount.create_account(name,account_type,initial_deposit)
 print("")
 print(msg)
 
@@ -39,9 +45,19 @@ while True:
     #     print(msg)
     if choice=='1':
         amount=input("Enter amount to deposit: ")
+        try:
+            amount= float(amount)
+        except ValueError:
+            print("invalid input")
+            continue
         print(Account1.deposit(amount))
     elif choice=='2':
-        amount=input("Enter amount to deposit: ")
+        amount=input("Enter amount to withdraw: ")
+        try:
+            amount= float(amount)
+        except ValueError:
+            print("invalid input")
+            continue
         print(Account1.withdraw(amount))
     elif choice=='3':
         print(Account1.check_balance())

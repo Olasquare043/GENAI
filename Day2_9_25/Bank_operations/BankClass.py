@@ -23,7 +23,7 @@ class BankAccount:
             return f"Enter a valid amount"
     def withdraw(self, amount):
         if amount>0:
-            self.balance+=amount
+            self.balance-=amount
             return f"{self.owner}, ₦{amount} has been withdraw from your account"
         else:
             return f"Enter a valid amount"
