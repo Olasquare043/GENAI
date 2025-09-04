@@ -1,7 +1,9 @@
 tasks = []
+
+# todoList="/Day1_9_25/todo.txt"
 def load_exist_task():
     try:
-        with open("todo.txt", "r") as file:
+        with open("Day1_9_25/todo.txt", "r") as file:
             for line in file:
                 id,task,task_status= line.strip().split(",")
                 tasks.append({"id":id,"task":task,"task_status":task_status})
