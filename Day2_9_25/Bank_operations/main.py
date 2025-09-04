@@ -34,15 +34,7 @@ while True:
     print("--------------------------------------")
     print("")
     choice= input("Enter your choice of operation: ")
-    
-   # checking choice
-    # if choice=="1":
-    #     name=input("Enter account fullname: ")
-    #     account_type=input("Which Account type you want to open (Savings/Current)?: ")
-    #     intial_deposit=input("Enter initial deposit: ")
-    #     # Creating account
-    #     msg,Account1= Bank.BankAccount.create_account(name,account_type,10000)
-    #     print(msg)
+    # checking the selected choice
     if choice=='1':
         amount=input("Enter amount to deposit: ")
         try:
@@ -67,7 +59,8 @@ while True:
         print("Invalid choice selected")
 print("")
 print("==============================================================")
-print("============== Welcome to Olasquare Bank =====================")
+print("============= Thanks for using Olasquare program =============")
 print("==============================================================")
 print()
+
 

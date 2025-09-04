@@ -1,4 +1,4 @@
-
+import user as User
 class Farmer(User):
     def __init__(self,name,phone,location,farm_size,major_crop):
         # calling the parent constructor for common attributes
@@ -34,7 +34,7 @@ class Farmer(User):
         return farmers
 
 # Display information
-    def display_info():
+    def display_info(self):
         super().display_info()
         print(f"Farm Size: {self.farm_size}")
         print(f"Major Crop: {self.major_crop}")
