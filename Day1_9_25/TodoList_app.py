@@ -74,7 +74,18 @@ def view_task ():
             print(f'{task["id"]}|\t{task["task"]}\t{task["task_status"]}')
     else:
         print("You do not have any task available")
+# function for update task staus
+def update_status(task_id):
+    task_to_updae=None
+    try:
+        task_id=int(task_id)
+    except ValueError:
+        print(f"Invalid task ID: {task_id}")
+        return
+    if task_to_update   
 
+
+# main function
 def main():
     load_exist_task()
     print("")
@@ -87,7 +98,8 @@ def main():
         print("1. Add Task")
         print("2. Delete Task")
         print("3. View task")
-        print("4. Exit")
+        print("4. Update task status")
+        print("5. Exit")
         print("++++++++++++++++++++++++++++")
         print("")
         choice = input("Enter your choice: ")
@@ -101,6 +113,8 @@ def main():
         elif choice == "3":
             view_task()
         elif choice == "4":
+            update_status(task_id)
+        elif choice == "5":
             break
         else:
             print("Invalid choice selected")
